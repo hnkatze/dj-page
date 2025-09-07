@@ -181,7 +181,7 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-rings-wedding text-2xl text-accent-foreground"></i>
+                <i className="fas fa-ring text-2xl text-accent-foreground"></i>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-2">Bodas</h3>
               <p className="text-muted-foreground">
