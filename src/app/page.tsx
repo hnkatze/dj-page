@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "motion/react"
+import { GalleryView } from "@/components/views/gallery"
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -101,7 +102,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Especialistas en fiestas de 15 años, cumpleaños y bodas en Houston, Texas
+            Especialistas en fiestas de 15 años, cumpleaños y bodas en todo Texas
           </motion.p>
 
           <motion.div
@@ -235,44 +236,7 @@ export default function HomePage() {
       </section>
 
       {/* Gallery Section */}
-      <section id="galeria" className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Galería de Eventos</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Algunos momentos especiales que hemos tenido el honor de ser parte
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
-              <motion.div
-                key={item}
-                className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={`/placeholder-4d5lb.png?height=300&width=400&query=DJ event ${item === 1 ? "quinceañera party" : item === 2 ? "wedding celebration" : item === 3 ? "birthday party" : item === 4 ? "christian wedding" : item === 5 ? "quinceañera dance" : "birthday celebration"} with lights and music`}
-                  alt={`Evento ${item}`}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <i className="fas fa-play text-white text-3xl"></i>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GalleryView />
 
       {/* Coverage Map Section */}
       <section className="py-20">
@@ -294,7 +258,7 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-1">
                 <img
-                  src="/texas-map-highlighting-houston-metropolitan-area-w.jpg"
+                  src="https://proyectoviajero.com/wp-content/uploads/2022/09/texas_mapa_detalle-XL.webp"
                   alt="Mapa de cobertura en Texas"
                   className="w-full h-80 object-cover rounded-lg"
                 />
